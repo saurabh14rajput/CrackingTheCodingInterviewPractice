@@ -1,0 +1,50 @@
+
+class Node{
+	int data;
+	Node next;
+	//constructor
+	Node(int data){
+		this.data=data;
+	}
+} 
+
+public class SumLists {
+
+	
+	public static Node createDummyList(){
+		int input1[] ={7,1,6};
+		Node head1=new Node(input1[0]);
+		Node temp=head1;
+		for(int i=1;i<input1.length;i++){
+			Node node=new Node(input1[i]);
+			temp.next=node;
+			temp=temp.next;
+		}
+		temp=head1;
+		while(temp!=null){
+			System.out.println(temp.data);
+			temp=temp.next;
+		}
+		
+		int input2[] ={5,9,2};
+		Node head2=new Node(input2[0]);
+		temp=head2;
+		for(int i=1;i<input2.length;i++){
+			Node node=new Node(input2[i]);
+			temp.next=node;
+			temp=temp.next;
+		}
+		temp=head2;
+		while(temp!=null){
+			System.out.println(temp.data);
+			temp=temp.next;
+		}
+		
+		return head;
+	}
+	
+	
+}
+
+
+
