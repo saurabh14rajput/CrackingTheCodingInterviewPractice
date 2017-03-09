@@ -1,0 +1,53 @@
+class Node{
+	int data;
+	Node next;
+	//constructor
+	Node(int data){
+		this.data=data;
+	}
+}
+
+public class Partition {
+	public static void main(String []args){
+		Node head=createDummyList();
+		int k=3;
+		head=partition(head,k);
+		System.out.println("After dpartition");
+		Node temp=head;
+		while(temp!=null){
+			System.out.println(temp.data);
+			temp=temp.next;
+		}
+	}
+	
+	public static Node partition(Node head,int k){
+		
+		Node curr=head;
+		Node left;
+		Node right;
+		
+		while(curr!=null){
+			if(curr.data<k){
+				
+			}
+		}
+		return head;
+	}
+	public static Node createDummyList(){
+		int input[] ={2,2,2,3,0,1,4,2,6,7,3,3};
+		Node head=new Node(input[0]);
+		Node temp=head;
+		for(int i=1;i<input.length;i++){
+			Node node=new Node(input[i]);
+			temp.next=node;
+			temp=temp.next;
+		}
+		temp=head;
+		while(temp!=null){
+			System.out.println(temp.data);
+			temp=temp.next;
+		}
+		return head;
+	}
+
+}

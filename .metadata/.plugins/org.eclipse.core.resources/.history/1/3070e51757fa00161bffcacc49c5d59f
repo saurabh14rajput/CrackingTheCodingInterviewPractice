@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class StringCompression {
+	public static void main(String []args){
+		Scanner sc = new Scanner(System.in);
+		String input=sc.nextLine();
+		System.out.println(compressString(input));
+	}
+	
+	public static String compressString(String input){
+		int gainCount=0;
+		for(int i=0;i<input.length();i++){
+			if(i+2<input.length()&& input.charAt(i)==input.charAt(i+1) && input.charAt(i)==input.charAt(i+2)){
+				gainCount++;
+			}
+		}
+		if(gainCount==0){
+			return input;
+		}
+		
+		char charArray[]=new char[input.length()-gainCount];
+		for(int i=0,j=0;i<input.length();i++){
+			if(i+2<input.length() && input.charAt(i)==input.charAt(i+1) && input.charAt(i)==input.charAt(i+2)){
+				int currentCount=0;
+				char currentChar=input.charAt(i);
+				while(input.charAt(i)==currentChar){
+					currentCount++;
+					i++;
+				}
+				charArray[j]=input.charAt(i);
+				charArray[j+1]=(char) currentCount;
+				j+=2;
+			}
+		}
+		return new String(charArray);
+	}
+
+}

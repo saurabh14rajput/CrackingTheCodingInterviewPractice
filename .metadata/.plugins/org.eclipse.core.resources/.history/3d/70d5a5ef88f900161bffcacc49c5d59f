@@ -1,0 +1,72 @@
+package com.balancedbrackets;
+
+
+	 static int findMatchingPair(String input) {
+	        Stack<Character> charStack= new Stack<Character>();
+	        int index=-1;
+	        for(int i=0; i<input.length();i++){
+	            if(Character.isUpperCase(input.charAt(i))){
+	                charStack.push(input.charAt(i));
+	            }
+	            else{
+	                 if(!charStack.isEmpty() && input.charAt(i)==Character.toLowerCase(charStack.pop())){
+	                    index=i;
+	                }
+	                else{
+	                    break;
+	                }
+	            }
+	        }
+	        return index;
+	    }
+
+	 
+	 
+	 
+	 static int findMinGates(int[] arrivals, int[] departures, int flights) {
+         Arrays.sort(arrivals);
+         Arrays.sort(departures);
+         int count=0;
+         int max=0;
+         int j=0;
+         for(int i=0; i<departures.length; i++){
+            for(;j<arrivals.length;j++){
+                if(departures[i]>=arrivals[j]){
+                    count++;
+                }
+                else{
+                    if(count>max){
+                        max=count;
+                    }  
+                    count--;
+                    break;    
+                }     
+            }
+        }
+        if(count>max)
+             max=count;
+        return max;
+ }
+	 
+	 
+	 
+	 
+	 static int findMinGates(int[] arrivals, int[] departures, int flights) {
+		    Arrays.sort(arrivals);
+		    Arrays.sort(departures);
+		    int runningCount=0;
+		    int maxCount=0;
+
+		    for(int i=0,j=0; i<departures.length; i++){
+		        while(j<arrivals.length && departures[i]>=arrivals[j]){
+		            ++j;
+		            ++runningCount;
+		        }
+		        if(runningCount>maxCount){
+		            maxCount=runningCount;
+		        }
+		        --runningCount;
+		    }
+		    return maxCount;
+		}
+

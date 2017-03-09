@@ -1,0 +1,7 @@
+
+public class LargestSumSubArray {
+	public static void main(String []args){
+		int input[]={1,2,-3,-6,1,4,5,-8,1,9,2};
+	}
+
+}

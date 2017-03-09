@@ -1,0 +1,9 @@
+00:21:25 **** Rebuild of configuration Debug for project Schedular ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o my_pthread_t.o "..\\my_pthread_t.c" 
+In file included from ..\my_pthread_t.c:19:0:
+..\my_pthread_t.h:21:22: fatal error: ucontext.h: No such file or directory
+compilation terminated.
+
+00:21:27 Build Finished (took 1s.877ms)
+

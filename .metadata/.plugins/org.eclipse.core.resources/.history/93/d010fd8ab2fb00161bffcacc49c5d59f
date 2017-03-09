@@ -1,0 +1,16 @@
+
+class Node{
+	int data;
+	Node next;
+	//constructor
+	Node(int data){
+		this.data=data;
+	}
+}
+
+public class RemoveDups {
+	
+	public static void main(String []args){
+		
+	}
+}

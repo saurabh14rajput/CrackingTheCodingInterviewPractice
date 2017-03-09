@@ -1,0 +1,18 @@
+Info: Nothing to build for Semaphore
+Info: Nothing to build for Semaphore
+Info: Nothing to build for Semaphore
+Info: Nothing to build for Semaphore
+16:01:14 **** Incremental Build of configuration Debug for project Semaphore ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o my_semaphone.o "..\\my_semaphone.c" 
+..\my_semaphone.c:35:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ main()
+ ^
+gcc -o Semaphore.exe my_semaphone.o 
+00:21:25 **** Rebuild of configuration Debug for project Schedular ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o my_pthread_t.o "..\\my_pthread_t.c" 
+In file included from ..\my_pthread_t.c:19:0:
+..\my_pthread_t.h:21:22: fatal error: ucontext.h: No such file or directory
+compilation terminated.
+Info: Nothing to build for Semaphore

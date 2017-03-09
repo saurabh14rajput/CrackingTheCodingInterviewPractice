@@ -1,0 +1,50 @@
+import java.util.HashMap;
+import java.util.Scanner;
+///////WRONG SOLUTION
+///////WRONG SOLUTION
+///////WRONG SOLUTION
+///////WRONG SOLUTION
+///////WRONG SOLUTION
+///////WRONG SOLUTION
+///////WRONG SOLUTION
+///////WRONG SOLUTION
+public class oneEditAway {
+	public static void main(String []args){
+		Scanner sc = new Scanner(System.in);
+		String input1=sc.nextLine();
+		String input2=sc.nextLine();
+		System.out.println(isOneEditAway(input1, input2));
+	}
+	
+	public static boolean isOneEditAway(String input1, String input2){
+		int lengthDiff=Math.abs(input1.length()-input2.length());
+		int sumValues=0;
+		if(lengthDiff>1)
+			return false;
+		HashMap<Character, Integer> charMap=new HashMap<Character, Integer>();
+		for(int i=0;i<input1.length();i++){
+			if(charMap.containsKey(input1.charAt(i))){
+				charMap.put(input1.charAt(i), charMap.get(input1.charAt(i))+1);
+			}
+			else{
+				charMap.put(input1.charAt(i), 1);
+			}
+		}
+		for(int i=0;i<input2.length();i++){
+			if(charMap.containsKey(input2.charAt(i))){
+				charMap.put(input2.charAt(i), charMap.get(input2.charAt(i))-1);
+			}
+			else{
+				charMap.put(input2.charAt(i), 1);
+			}
+		}
+		for(int value: charMap.values()){
+			sumValues+=value;
+		}
+		System.out.println(sumValues);
+		if((lengthDiff==0 && sumValues>1) || (lengthDiff==1 && sumValues>2)){
+			return false;
+		}
+		return true;
+	}
+}

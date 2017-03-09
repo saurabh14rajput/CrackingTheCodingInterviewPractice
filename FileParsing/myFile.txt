@@ -1,0 +1,4 @@
+bye 1
+hello 2
+tata 4
+goodmorning 6

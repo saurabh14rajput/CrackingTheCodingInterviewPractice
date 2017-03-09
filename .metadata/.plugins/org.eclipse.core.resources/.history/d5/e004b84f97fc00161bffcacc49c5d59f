@@ -1,0 +1,46 @@
+class Node{
+	int data;
+	Node next;
+	//constructor
+	Node(int data){
+		this.data=data;
+	}
+}
+
+
+public class KthToLast {
+	public static void main(String []args){
+	Node head=createDummyList();
+	Node resultNode=kNodeFromLast(head,k);
+	}
+	
+	public static Node kNodeFromLast(Node head, int k){
+		int nodeCount=0;
+		int equivalentCountFromStart=0;
+		Node curr=head;
+		while(curr!=null){
+			nodeCount++;
+			curr=curr.next;
+		}
+		equivalentCountFromStart=nodeCount-k
+		 return head;
+	}
+	
+	public static Node createDummyList(){
+		int input[] ={2,2,2,3,4,2,6,7,3,3};
+		Node head=new Node(input[0]);
+		Node temp=head;
+		for(int i=1;i<input.length;i++){
+			Node node=new Node(input[i]);
+			temp.next=node;
+			temp=temp.next;
+		}
+		temp=head;
+		while(temp!=null){
+			System.out.println(temp.data);
+			temp=temp.next;
+		}
+		return head;
+	}
+
+}

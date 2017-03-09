@@ -1,0 +1,60 @@
+package hash.table.imple;
+class Node{
+	String key;
+	int value;
+	Node next;
+}
+
+public class HashTable {
+	private Node hashArray[]=new Node[10000];
+
+	private int hashFunction(String input){
+		int hashCode = 7;
+		for (int i = 0; i < input.length(); i++) {
+			hashCode= hashCode*31 + input.charAt(i);
+		}
+		System.out.println("hashCode :"+hashCode);
+		return hashCode;
+	}
+	
+	private int getHashArrayIndex(int hashCode){
+		System.out.println("Array Index :"+(hashCode % hashArray.length));
+		return (hashCode % hashArray.length);
+	}
+	
+	public boolean hashTableInsert(String key, int value){
+		int arrayIndex=getHashArrayIndex(hashFunction(key));
+		Node newNode = new Node();
+		newNode.key=key;
+		newNode.value=value;
+		newNode.next=null;
+		if(hashArray[arrayIndex]==null){
+			hashArray[arrayIndex]=newNode;
+		}
+		else{
+			Node tempNode=hashArray[arrayIndex];
+			while(tempNode.next!=null){
+				tempNode=tempNode.next;
+			}
+			tempNode.next=newNode;
+		}
+		return true;
+	}
+	public int hashTableLookUp(String key){
+		int arrayIndex=getHashArrayIndex(hashFunction(key));
+		int result;
+		Node tempNode=hashArray[arrayIndex];
+		while(!tempNode.key.equals(key)){
+			tempNode=tempNode.next;
+		}
+		if(tempNode.key.equals(key)){
+			result= tempNode.value;
+		}
+		else{
+			result=-1;
+		}
+		return result;
+	}
+}
+
+

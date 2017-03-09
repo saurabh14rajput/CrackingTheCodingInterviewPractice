@@ -1,0 +1,21 @@
+
+public class LargestSumSubArray {
+	public static void main(String []args){
+		//int input[]={1,2,-3,-6,1,4,5,-8,1,9,2};
+		int input[]={-2,3,2,-1};
+		System.out.println(largestSumSubarray(input));
+	}
+
+	public static int largestSumSubarray(int[] input){
+		int runningMax=input[0];
+		int globalMax=input[0];
+		for(int i=1;i<input.length;i++){
+			runningMax=Math.max(runningMax+input[i], input[i]);
+			if(runningMax > globalMax){
+				globalMax= runningMax;
+			}
+			//globalMax= runningMax > globalMax ? runningMax : globalMax;
+		}
+		return globalMax;
+	}
+}

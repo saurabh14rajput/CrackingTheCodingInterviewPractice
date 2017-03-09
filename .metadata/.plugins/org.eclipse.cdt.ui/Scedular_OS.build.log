@@ -1,0 +1,9 @@
+02:44:21 **** Incremental Build of configuration Debug for project Scedular_OS ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "scr\\main.o" "..\\scr\\main.c" 
+In file included from ..\scr\main.c:6:0:
+..\scr\my_pthread_t.h:28:22: fatal error: ucontext.h: No such file or directory
+compilation terminated.
+
+02:44:21 Build Finished (took 152ms)
+

@@ -1,0 +1,29 @@
+package is.unique;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class IsUnique {
+	public static void main(String []args){
+		Scanner sc = new Scanner(System.in);
+		String input=sc.nextLine();
+		boolean isRepeat=false;
+		int i;
+		HashMap<Character, Integer> uniqueMap= new HashMap<Character, Integer>();
+		
+		for(i=0;i<input.length();i++){
+			if(uniqueMap.containsKey(input.charAt(i))){
+				isRepeat=true;
+				break;
+			}
+			else{
+				uniqueMap.put(input.charAt(i),1);
+			}
+		}
+		
+		if(isRepeat){
+			System.out.println("First Duplicate Character: "+input.charAt(i));
+		}
+		
+	}
+}

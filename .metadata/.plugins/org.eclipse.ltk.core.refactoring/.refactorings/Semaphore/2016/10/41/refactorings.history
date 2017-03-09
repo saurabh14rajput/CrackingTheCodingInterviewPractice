@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Semaphore/src/my_semaphone&apos; to &apos;my_semaphone.c&apos;" description="Rename resource &apos;my_semaphone&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/my_semaphone" name="my_semaphone.c" stamp="1475696330192" updateReferences="true"/>
+</session>
