@@ -8,4 +8,5 @@
 <fullyQualifiedTypeName name="is.unique.IsUnique"/>
 <fullyQualifiedTypeName name="is.permutsation.example.IsPermutation"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Array"/>
 </qualifiedTypeNameHistroy>
