@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Stack;
 
 class Node{
@@ -19,7 +18,7 @@ public class PalindromeLinkedList {
 	public static boolean isPalindromeList(Node head){
 		//let's reverse the list
 		Node curr=head;
-		Stack reverseStack=new Stack<Integer>();
+		Stack<Integer> reverseStack=new Stack<Integer>();
 		while(curr!=null){
 			reverseStack.push(curr.data);
 			curr=curr.next;
