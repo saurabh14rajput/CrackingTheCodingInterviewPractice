@@ -41,7 +41,8 @@ public class IntersectionLinkedList {
 		System.out.println(areIntersectingLists(head1,head2));
 		
 	}
-	
+	//putting all the nodes of the first list into a hashmap
+	//Then comparing the nodes in the second with the ones already in the hashmap
 	public static boolean areIntersectingLists(Node head1,Node head2){
 		Node curr=head1;
 		HashMap<Node, Integer> nodeCount=new HashMap<Node, Integer>();
