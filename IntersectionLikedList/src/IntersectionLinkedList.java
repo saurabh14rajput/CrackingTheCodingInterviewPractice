@@ -12,7 +12,7 @@ class Node{
 public class IntersectionLinkedList {
 	public static void main(String[] args){
 		
-		
+		//creating two dummy intersecting lists
 		int[] input={7,1,6,5,7,9};
 		Node head1=new Node(input[0]);
 		Node temp=head1;
