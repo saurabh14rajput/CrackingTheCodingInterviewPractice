@@ -5,6 +5,7 @@ class Node{
 	//constructor
 	Node(int data){
 		this.data=data;
+		next=null;
 	}
 } 
 
