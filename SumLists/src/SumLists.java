@@ -7,12 +7,14 @@ class Node{
 		this.data=data;
 		next=null;
 	}
+	Node(){
+	}
 } 
 
 public class SumLists {
 
 	public static void main(String args[]){
-		int[] input1={7,1,6};
+		int[] input1={7,1,6,9};
 		Node head1=createDummyList(input1);
 		System.out.println("List created.");
 		printList(head1);
@@ -26,38 +28,32 @@ public class SumLists {
 		printList(head3);
 		
 	}
-	//Simple straightforward solution
-	public static Node sumLists(Node head1, Node head2){
-		int multiplyer=1;
-		int num1=0;
-		int num2=0;
-		int sum=0;
-		while(head1!=null){
-			num1+=head1.data*multiplyer;
-			head1=head1.next;
-			multiplyer=multiplyer*10;
-		}
-		System.out.println("first number: "+num1);
-		multiplyer=1;
-		while(head2!=null){
-			num2+=head2.data*multiplyer;
-			head2=head2.next;
-			multiplyer=multiplyer*10;
-		}
-		System.out.println("second number: "+num2);
-		sum=num1+num2;
-		System.out.println("Sum: "+sum);
-		Node head3=new Node(sum%10);
-		Node temp=head3;
-		sum=sum/10;
-		while(sum>1){
-			Node node=new Node(sum%10);
-			temp.next=node;
-			temp=temp.next;
-			sum=sum/10;
-		}
-		return head3;
+	//recursive solution
+	public static Node sumLists(Node head1,Node head2){
+		return sumNodes(head1,head2,0);
 	}
+	
+	public static Node sumNodes(Node node1, Node node2, int carry){
+		if(node1==null && node2==null && carry==0){
+			return null;
+		}
+		Node result=new Node();
+		int value=carry;
+		if(node1!=null){
+			value+=node1.data;
+		}
+		if(node2!=null){
+			value+=node2.data;
+		}
+		result.data=value%10;
+		//recursion
+		if(node1!=null || node2!=null){
+			Node resultMore=sumNodes(node1==null?null:node1.next, node2==null?null:node2.next,value>10?1:0);
+			result.next=resultMore;
+		}
+		return result;	
+	}
+	
 	
 	public static Node createDummyList(int[] input){
 		//int input[] ={7,1,6};
