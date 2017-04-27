@@ -17,6 +17,7 @@ public class ReverseTheList {
 		printList(head);
 		
 	}
+	//Iterative solution
 	public static Node reverse(Node head){
 		if(head==null){
 			return null;
@@ -35,6 +36,14 @@ public class ReverseTheList {
 		return prev;
 	}
 	
+	//Recursive solution
+	public static Node reverseRecurcive(Node head){
+		if(head==null){
+			return null;
+		}
+		reverseRecurcive(head.next).next=head;
+		return head;
+	}
 	public static Node createDummyList(int[] input){
 		//int input[] ={7,1,6};
 		if(input==null){

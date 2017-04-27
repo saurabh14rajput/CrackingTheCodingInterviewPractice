@@ -4,6 +4,7 @@ class Node{
 	//constructor
 	Node(int data){
 		this.data=data;
+		this.next=null;
 	}
 }
 
@@ -11,7 +12,7 @@ public class Partition {
 	public static void main(String []args){
 		Node head=createDummyList();
 		int k=3;
-		head=partitionConcise(head,k);
+		head=partitionConcise(head, k);
 		System.out.println("After dpartition");
 		Node temp=head;
 		while(temp!=null){
@@ -82,9 +83,8 @@ public class Partition {
 	}
 	
 	
-	
 	public static Node createDummyList(){
-		int input[] ={2,2,2,3,0,1,4,2,6,7,3,3};
+		int input[] ={8,7,2,4,1,2};
 		Node head=new Node(input[0]);
 		Node temp=head;
 		for(int i=1;i<input.length;i++){

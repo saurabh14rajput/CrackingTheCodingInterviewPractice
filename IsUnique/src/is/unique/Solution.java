@@ -55,4 +55,28 @@ public class Solution {
 		}
 		return true;
 	}
+	
+	//Using a boolean array as a hash-table
+	public static boolean isUniqueArray(String input){
+		if(input.length()>128){ //assuming the ASCII character set.
+			return false;
+		}
+		else if(input.length()==1){
+			return true;
+		}
+		else if(input.length()==0){
+			throw new RuntimeException("Empty string!");
+		}
+		boolean[] charSet=new boolean[128];
+		for(int i=0;i<input.length();i++){
+			int index=input.charAt(i);
+			if(charSet[index]){
+				return false;
+			}
+			else{
+				charSet[index]=true;
+			}
+		}
+		return true;
+	}
 }

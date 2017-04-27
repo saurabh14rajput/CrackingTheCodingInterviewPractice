@@ -12,6 +12,7 @@
 <item elementID="=IsUnique" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=HashTableImplementation" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=StringWithFirstLetterOfEachWord" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ArrayRotationPoint" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1488063271270_4" label="LinkedLists" name="LinkedLists">
 <item elementID="=KthToLast" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
@@ -26,6 +27,13 @@
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1492564171306_5" label="StacksAndQueues" name="StacksAndQueues">
 <item elementID="=StackImplementation" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=MergeOverlapingIntervals" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1492814127718_6" label="TreesAndGraphs" name="TreesAndGraphs">
+<item elementID="=MinimalBST" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=NonRecursivePreOrderTraversal" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=NonRecursiveInOrderTraversal" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=NonRecursivePostOrderTraversal" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1475351793061_0" label="Window Working Set" name="Aggregate for window 1475351793061"/>
 </workingSetManager>
